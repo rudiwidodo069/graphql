@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "rudi",
+      "email": "rudi@email.com",
+      "password": "qwerty"
+    },
+    {
+      "id": 2,
+      "name": "widodo",
+      "email": "widodo@email.com",
+      "password": "qwerty"
+    },
+    {
+      "id": 3,
+      "name": "rudiwidodo",
+      "email": "rudiwidodo@email.com",
+      "password": "qwerty"
+    }
+  ]
+}

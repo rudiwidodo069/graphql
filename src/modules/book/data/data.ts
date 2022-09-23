@@ -8,18 +8,22 @@ export class BookData {
   }
 
   getone(query: BookFilterQuery) {
-    return this.model.findOne(query);
+    return this.model.findOne(query).populate("user").exec();
   }
 
   getById(query: BookFilterQuery) {
-    return this.model.findById(query);
+    return this.model.findById(query).populate("user").exec();
   }
 
   getAll(query: BookFilterQuery) {
-    return this.model.find(query);
+    return this.model.find(query).populate("user").exec();
   }
 
   create(query: BookFilterQuery) {
     return this.model.create(query);
+  }
+
+  deleteOne(query: BookFilterQuery) {
+    return this.model.findByIdAndDelete(query);
   }
 }

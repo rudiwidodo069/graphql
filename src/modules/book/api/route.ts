@@ -1,12 +1,11 @@
 import { Router } from "express";
-import { UserController } from "./controller";
+import { BookController } from "./controller";
 
 const router = Router();
 
-const controller = new UserController();
+const controller = new BookController();
 
-router.get("/one", controller.one);
 router.get("/", controller.all);
 router.post("/", controller.create);
 
-export { router as userRouter };
+export { router as bookRouter };

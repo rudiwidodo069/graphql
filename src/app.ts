@@ -1,12 +1,12 @@
 import express from "express";
+import * as _ from "lodash";
 import dotenv from "dotenv";
 import { graphqlHTTP } from "express-graphql";
 import morgan from "morgan";
 import cors from "cors";
 import mongoose from "mongoose";
 import { indexRouter } from "./router";
-import { grapqlSchema } from "./modules/user/graphql/schema";
-import { grapqlSchemaBook } from "./modules/book/graphql/schema";
+import { RootType } from "./graphql/schema";
 
 dotenv.config();
 
@@ -27,7 +27,7 @@ app.use("/v1", indexRouter);
 app.use(
   "/graphql",
   graphqlHTTP({
-    schema: grapqlSchema,
+    schema: RootType,
     graphiql: true,
   })
 );

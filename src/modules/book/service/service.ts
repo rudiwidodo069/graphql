@@ -34,4 +34,8 @@ export class BookService {
   async create(query: IBook): Promise<IBookDoc | null> {
     return await this.data.create(query);
   }
+
+  async deleteOne(query: BookFilterQuery): Promise<IBookDoc | null> {
+    return await this.data.deleteOne(query);
+  }
 }
